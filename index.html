@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #FFE4E1;
+            font-family: 'Nunito', sans-serif;
+            color: #D87093;
+            text-align: center;
+            padding: 20px;
+        }
+        .happy-birthday-text {
+            font-size: 48px;
+            font-weight: bold;
+            color: #ff1493;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+            z-index: 10;
+            animation: fadeOut 5s forwards;
+        }
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            100% { opacity: 0; visibility: hidden; }
+        }
+        .notebook {
+            background: #fffaf0;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+            width: 90%;
+            max-width: 600px;
+            margin: auto;
+            position: relative;
+            border: 2px dashed #D87093;
+            opacity: 0;
+            animation: fadeIn 6s forwards;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        .header {
+            font-size: 36px;
+            font-weight: bold;
+            color: #ff69b4;
+            margin-bottom: 10px;
+        }
+        .timestamp {
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 20px;
+        }
+        .photo-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .photo-item {
+            background: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+            text-align: center;
+            position: relative;
+        }
+        .photo-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .photo-caption {
+            margin-top: 5px;
+            font-size: 14px;
+            color: #D87093;
+        }
+        .firework {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: radial-gradient(circle, yellow, red);
+            border-radius: 50%;
+            animation: explode 0.6s linear;
+        }
+        @keyframes explode {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(4); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="happy-birthday-text">Happy Birthday Sayang! 🎉</div>
+    
+    <!-- Audio dengan tombol play -->
+    <audio id="bg-music" loop>
+        <source src="blue.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <button id="play-music" class="btn btn-primary mt-3">Putar Musik 🎶</button>
+
+    <div class="notebook">
+        <h1 class="header">Happy Birthday</h1>
+        <h2> Athira Nisrina Rafilla</h2>
+        <p class="timestamp">24 Maret 2025</p>
+        <p>Selamat ulang tahun! Hari ini milikmu sayang nikmati dengan penuh kebahagiaan dan kenangan indah.</p>
+        <p>Putar dulu musicnya yaa sayangg enjoy yaa this one for u babe!!!</p>
+        <div class="photo-grid">
+            <div class="photo-item" onclick="showFirework(event)">
+                <img src="photo1.jpg" alt="Foto 1">
+                <p class="photo-caption">kenapa aku taruh foto ini di bagian pertama? karena foto ini foto yang paling aku suka. eits jangan marah loh ya. sayangku, aku tak tau bagaimana tuhan menciptakan mu sedemikian rupa sehingga membuat seluruh jiwa dan raga ku hanyut dalam sukmamu,
+                     aku pun tak tau bisa sejauh ini mengenal dirimu. mungkin kepanjangan ya, lanjut dibawahnya yaa. enjoy ur life with me babe:3</p>
+            </div>
+            <div class="photo-item" onclick="showFirework(event)">
+                <img src="photo2.jpg" alt="Foto 2">
+                <p class="photo-caption">Hari ini, tepat 21 tahun yang lalu, dunia menjadi lebih indah karena kehadiranmu hehe. btw,kalau ini foto yang paling lucu dan gemacc cekalii, love u sayang. 
+                    bertambah umurmu sekarang jangan sampai merubah siapa dirimu, teruslah berjuang untuk orang orang tercintamu, untuk skincare yang kamu impikan, untuk make up yang kamu dambakan, untuk dress cantik yang ingin kamu pakai. ingat doa mu dan orang terdekat mu yg dipanjatkan buat kmu yaa ini lah kmu sekarang, and i hope u grow up again and again babe💗‼
+                </p>
+            </div>
+            <div class="photo-item" onclick="showFirework(event)">
+                <img src="photo3.jpg" alt="Foto 3">
+                <p class="photo-caption">look ur self babe, u feel like sky and sea it's something beautiful things ya? aku disini hanya seorang yang mencoba menjadi bagian di hidupmu, segala kekuranganmu bagiku itu kelebihan yang tidak dimiliki seseorang selain pacarku sendiri. aku bangga dengan kamu sekarang,kemarin dan seterusnya yang sudah berada di titik yang dimana orang lain belum tentu kuat, di umurmu yang ke 21 ini aku berdoa supaya kamu tetap menjadi dirimu sendiri 
+                    dan mendapatkan apa yg kmu harapkan. sehat selalu yaa semestaku, Semoga semua impianmu terwujud, sayang. 🎈✨</p>
+            </div>
+            <div class="photo-item" onclick="showFirework(event)">
+                <img src="photo4.jpg" alt="Foto 4">
+                <p class="photo-caption">mungkin sisa foto nya aku sisipkan foto kita ya, gapapa kan?sebenernya aku ga tau apa yang mau tulis disini, oh ya ini foto terlucu kita menurutku hehe. aku jatuh cinta secara tidak sengaja namun aku tak tau cara menahanya, akhirnya aku tersesat didalam naungan cinta yg kita bentuk bersama, aku gamau pulang dan aku ingin tersesat bersamamu sayang, aku nyaman disini selama itu sama kamu, aku merasa disayang dan dipeduliin.
+                     dan ini bukan gombal tapi emang kamu dan hanya kamu yang bisa buat aku begini sayang. jadi jangan bosen dan jangan ada niatan buat ninggalin aku yaa sayangg hehe, kiss for u💋💋💋
+                  </p>
+            </div>
+            <div class="photo-item" onclick="showFirework(event)">
+                <img src="photo5.jpg" alt="Foto 5">
+                <p class="photo-caption">Di hari spesialmu ini, aku ingin kau tahu betapa aku mencintaimu. Aku ingin jadi alasan di balik setiap senyum dan kebahagiaanmu. dan yap, ini foto terakhir dan terkece selama kita fotbar hehe dan lagi lagi ini menurut ku ya sayang, oh iya jangan lupa yaa dipakai jam tangannya kalau bisa sama gelangnya juga, semoga kamu suka sayang. 
+                    maaf jika yang ku berikan tidak sepadan apa yang kamu berikan ke aku kala itu, namun jika ada lebih aku tidak akan lupa dengan orang yang selalu ada sama aku dikala aku senang maupun susah itu yang akan aku utamakan. mungkin itu saja yang bisa aku sampaikan, yang paling penting aku ingin kamu tetap hidup di hatiku dan selalu ada buat aku. ingat juga ada yang harus kamu kejar dan banggakan kepada semua orang bahwa athira nisrina rafila adalah seseorang yang akan mencapai kesuksesan, aamiin. 
+                    sekian dariku, selamat mengulang umur kesayanganku, semestaku, segalanya bagiku💓❤️🌹</p>
+            </div>
+        </div>
+        
+        <p class="footer">for the last and fyi ini aku buat dadakan pada tanggal 22 Maret saat kamu tidur hehe, semoga kamu suka yaa meskipun konsepnya gini gini aja soalnya aku bingung sayang mau buat seperti apa. 
+           maaf juga kalau ini ga sesuai sama yang kamu harapkan yaa </p>
+        <p>semoga kamu suka selalu yaa💓💓💓</p>
+    </div>
+
+    <script>
+        // Mulai musik setelah user klik tombol play
+        document.getElementById("play-music").addEventListener("click", function () {
+            let music = document.getElementById("bg-music");
+            music.play().catch(error => console.log("Autoplay blocked:", error));
+        });
+
+        // Efek petasan saat klik foto
+        function showFirework(event) {
+            let firework = document.createElement("div");
+            firework.classList.add("firework");
+            firework.style.top = event.clientY + "px";
+            firework.style.left = event.clientX + "px";
+            document.body.appendChild(firework);
+            setTimeout(() => firework.remove(), 600);
+        }
+    </script>
+</body>
+</html>
